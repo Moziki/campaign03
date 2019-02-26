@@ -1,8 +1,10 @@
 package edu.isu.cs.cs3308.traversals;
 
 import com.google.common.collect.Lists;
+import edu.isu.cs.cs3308.structures.BinaryTree;
 import edu.isu.cs.cs3308.structures.Node;
 import edu.isu.cs.cs3308.structures.Tree;
+import edu.isu.cs.cs3308.structures.impl.LinkedBinaryTree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -11,7 +13,7 @@ import java.util.List;
 
 
 public class BreadthFirstTraversal<E> extends AbstractTraversal<E> {
-    public BreadthFirstTraversal(Tree<E> t) {
+    public BreadthFirstTraversal(LinkedBinaryTree<E> t) {
         super(t);
     }
 

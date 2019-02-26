@@ -32,7 +32,9 @@ public class LinkedBinaryTree<E> implements BinaryTree<E>, Tree<E> {
         public void setRight(Node<E> rightChild) {right = rightChild;}
     }
 
-    protected BinaryTreeNode<E> createNode(E e, Node<E> parent, Node<E> left, Node<E> right) {
+    protected BinaryTreeNode<E> createNode(E e, BinaryTreeNode<E> parent, BinaryTreeNode<E> left, BinaryTreeNode<E> right) {
+        if (e == null)
+            throw new IllegalArgumentException();
         return new BinaryTreeNode<>(e, parent, left, right);
     }
 
