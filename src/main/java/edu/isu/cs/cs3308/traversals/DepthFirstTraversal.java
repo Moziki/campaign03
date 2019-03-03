@@ -7,7 +7,7 @@ import edu.isu.cs.cs3308.structures.impl.LinkedBinaryTree;
 
 import java.util.List;
 
-public class DepthFirstTraversal<E> extends AbstractTraversal<E> {
+public abstract class DepthFirstTraversal<E> extends AbstractTraversal<E> {
     public DepthFirstTraversal(LinkedBinaryTree<E> t) {
         super(t);
     }

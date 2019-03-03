@@ -105,7 +105,7 @@ public class InOrderTraversalTest {
     @Test(expected = IllegalArgumentException.class)
     public void testTraverse_3() {
         tree = null;
-        fixture = new InOrderTraversal(tree);
+        fixture = new InOrderTraversal<>(tree);
     }
 
     @Test

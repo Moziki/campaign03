@@ -97,7 +97,7 @@ public interface Tree<E> {
      * @throws IllegalArgumentException if the provided parent node is invalid,
      * or the provided value is null.
      */
-    Node<E> insert(E item, Node<E> p);
+    Node<E> insert(E item, Node<E> p) throws IllegalArgumentException;
 
     /**
      * Removes the given item from the provided parent node.
