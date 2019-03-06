@@ -156,7 +156,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E>, Tree<E> {
             parent.setRight(node);
             size++;
         } else {
-            insert(item, (Node<E>) parent.getLeft());
+            insert(item, parent.getLeft());
         }
         return node;
     }
@@ -214,7 +214,7 @@ public class LinkedBinaryTree<E> implements BinaryTree<E>, Tree<E> {
         Node<E> node = p;
         if (node.getParent() == null && node != root)
             throw new IllegalArgumentException("p is no longer in the tree");
-        return (BinaryTreeNode<E>) p;
+        return p;
     }
 
     @Override

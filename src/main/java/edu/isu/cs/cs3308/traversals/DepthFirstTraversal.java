@@ -7,25 +7,18 @@ import edu.isu.cs.cs3308.structures.impl.LinkedBinaryTree;
 
 import java.util.List;
 
-public abstract class DepthFirstTraversal<E> extends AbstractTraversal<E> {
-    public DepthFirstTraversal(LinkedBinaryTree<E> t) {
-        super(t);
-    }
+public abstract class DepthFirstTraversal<E> extends AbstractTraversal<E> implements TreeTraversal{
+
 
     @Override
-    public Iterable<Node<E>> traverse() {
-       return traverseFrom(tree.root());
-    }
+    public abstract Iterable<Node<E>> traverse();
 
     @Override
-    public Iterable<Node<E>> traverseFrom(Node node) {
-        return subTreeTraverse(node);
-    }
+    public abstract Iterable<Node<E>> traverseFrom(Node node);
 
-    public Iterable<Node<E>> subTreeTraverse(Node n) {
-        List<Node<E>> snapshot = Lists.newArrayList();
-        if (!tree.isEmpty())
-            subtree(n, snapshot);
-        return snapshot;
-    }
+    public abstract Iterable<Node<E>> subTreeTraverse(Node n);
+
+    public abstract void subTree(Node<E> p, List<Node<E>> l);
+
+
 }

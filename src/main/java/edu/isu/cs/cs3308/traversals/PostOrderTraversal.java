@@ -6,12 +6,27 @@ import edu.isu.cs.cs3308.structures.impl.LinkedBinaryTree;
 
 import java.util.List;
 
-public class PostOrderTraversal<E> extends DepthFirstTraversal<E> {
+public class PostOrderTraversal<E> extends DepthFirstTraversal<E> implements TreeTraversal{
     public PostOrderTraversal(LinkedBinaryTree<E> t) {
-        super(t);
+        tree = t;
     }
 
-    public Iterable<Node<E>> subtree(Node<E> n, List<Node<E>> l) {
+    @Override
+    public Iterable<Node<E>> traverse() {
+        return null;
+    }
+
+    @Override
+    public Iterable<Node<E>> traverseFrom(Node node) {
+        return null;
+    }
+
+    @Override
+    public Iterable<Node<E>> subTreeTraverse(Node n) {
+        return null;
+    }
+
+    public void subtree(Node<E> n, List<Node<E>> l) {
         if (tree.left(n) != null)
             subtree(tree.left(n), l);
         if (tree.right(n) != null)

@@ -14,9 +14,9 @@ import java.util.List;
 
 public class BreadthFirstTraversal<E> extends AbstractTraversal<E> {
     public BreadthFirstTraversal(LinkedBinaryTree<E> t) {
-        super(t);
-    }
+        tree = t;
 
+    }
     @Override
     public Iterable<Node<E>> traverse() {
         traverseFrom(tree.root());
